@@ -1,0 +1,190 @@
+body {
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #fff !important;
+    font-size: 12px;
+    color: #676a6c;
+    overflow-x: hidden;
+}
+.white-bg-top{
+    background-color: #ffffff !important;
+}
+.nav > li > a {
+    color: var(--white) !important;
+    font-weight: 300;
+    padding: 14px 20px 14px 25px;
+    display: block;
+}
+.nav > li.active {
+    background: var(--bg-nav) !important;
+}
+.nav > li.active > a {
+    color: var(--white) !important;
+    font-weight: 600;
+    
+}
+
+.navbar-default .nav > li > a:hover, .navbar-default .nav > li > a:focus {
+    background-color: var(--bg-nav) !important;
+    color: #fff !important;
+}
+ul.nav-second-level {
+    background: var(--primary-color) !important;
+}
+.nav-header {
+    padding: 20px;
+    /* border-radius: 0px 30px 0px 0px; */
+    /* background-color: var(--white) !important; */
+    background-image: inherit;
+}
+.nav-header a {
+    color: #38b6ff;
+    font-weight: bold;
+}
+.white-bg {
+    background-color: var(--white) !important;
+}
+.form-group {
+    margin-bottom: 0.3rem;
+}
+.btn-higienis{
+   border-radius: 16px;
+   background-color:#0079C3;
+   border-color: #0079C3;
+   height: 48px;
+   padding: 14px 12px 14px 12px;
+
+}
+.breadcrumb {
+    padding: 0;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.breadcrumb > .active {
+    color: var(--black);
+}
+.logo-element {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--white) !important;
+    display: none;
+    padding: 18px 0;
+}
+.border-bottom {
+    border-bottom: none;
+}
+.page-heading h2{
+    color: var(--black);
+    font-weight: 600;
+}
+.ibox-title h4 {
+    display: inline-block;
+    font-size: 16px;
+    color:var(--black);
+    padding: 0;
+    text-overflow: ellipsis;
+    float: none;
+}
+.btn-success {
+    color: #fff !important;
+    background-color: #1cb393;
+    border-color: #1cb393;
+}
+.btn-success:hover, .btn-success:focus, .btn-success.focus {
+    color: #fff;
+    background-color: #1cb393;
+    border-color: #1cb393;
+}
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #0079C3;
+    border-radius: 50%;
+    margin-top:5px;
+}
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ffffff;
+    border-color: #e7eaec;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 2px 0 0;
+    color: inherit;
+    margin-bottom: 0;
+    padding: 15px 90px 8px 15px;
+    min-height: 48px;
+    position: relative;
+    clear: both;
+}
+
+.ibox-content {
+    background-color: #ffffff;
+    color: inherit;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 15px 20px 20px 20px;
+    border-color: #e7eaec;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    border: 2px solid rgb(255 255 255 / 13%);
+}
+
+.dataTables_length {
+    float: left;
+    margin-right: 30px;
+}
+div.dataTables_wrapper div.dataTables_info {
+    padding-top: 8.5px !important;
+    white-space: nowrap !important;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: -20px !important;
+    float: right;
+    margin-right: 20px;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.is-active{
+    background-color: var(--primary-color) !important;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.is-inactive{
+    background-color: var(--secondary-color) !important;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: var(--primary-color-active);
+    border-color: var(--primary-color-active);
+}
+.btn-primary:active {
+    color: #fff;
+    background-color: var(--black);
+    border-color: var(--black);
+  }
+
+.ibox-card{
+    /* background-color: var(--bg-nav) !important; */
+    padding: 10px 10px 0px !important;
+}
+
+.circle{
+    width: 24px;
+    height: 24px;
+    background-color: var(--black);
+    color: var(--primary-color);
+}
