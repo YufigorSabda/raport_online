@@ -29,6 +29,10 @@
         'student.edit_title'       => 'Edit Siswa',
         'student.view_title'       => 'Detail Siswa',
 
+        'menu_operator'             => 'Operator',
+        'operator.add_title'        => 'Tambah Operator',
+        'operator.edit_title'       => 'Edit Operator',
+        'operator.view_title'       => 'Detail Operator',
 
         'menu_report' => [
             'menu'                  => 'Laporan',
