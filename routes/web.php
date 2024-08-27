@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataSekolah\KepalaSekolahController;
 use App\Http\Controllers\DataSekolah\SekolahController;
 use App\Http\Controllers\Pengguna\GuruController;
+use App\Http\Controllers\Pengguna\OperatorController;
 use App\Http\Controllers\Pengguna\SiswaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
@@ -32,6 +33,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('teacher', GuruController::class)->only(['index', 'store', 'destroy']);
     Route::put('teacher/{id}', [GuruController::class, 'reset_password'])->name('teacher.reset');
+
+    Route::resource('operator', OperatorController::class)->only(['index', 'store', 'destroy']);
 
     Route::controller(ProfileController::class)->group(function () {
         Route::get('/profile', 'index')->name('profile.index');
