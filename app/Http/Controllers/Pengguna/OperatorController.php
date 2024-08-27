@@ -24,7 +24,7 @@ class OperatorController extends Controller
             'ref_ptk'   => RefPtk::all()
         ];
 
-        return view('backend.operator.index', compact('data', 'data_guru'));
+        return view('backend.operator.index', compact('data', 'data_guru', 'referensi'));
     }
 
     public function store(Request $request)
