@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Pengguna;
 
 use App\Http\Controllers\Controller;
+use App\Models\RefGender;
+use App\Models\RefPtk;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -18,7 +20,7 @@ class OperatorController extends Controller
             ->with('ref_guru')
             ->get();
 
-        $data = User::role('Operator')->with('ref_gutu.ref_ptk')->get();
+        $data = User::role('Operator')->with('ref_guru.ref_ptk')->get();
 
         $referensi = [
             'ref_gender' => RefGender::all(),
