@@ -19,6 +19,11 @@ class OperatorController extends Controller
             ->with('ref_guru')
             ->get();
 
+        $referensi = [
+            'ref_gender' => RefGender::all(),
+            'ref_ptk'   => RefPtk::all()
+        ];
+
         return view('backend.operator.index', compact('data', 'data_guru'));
     }
 
