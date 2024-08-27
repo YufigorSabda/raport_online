@@ -20,7 +20,7 @@ class OperatorController extends Controller
             ->with('ref_guru')
             ->get();
 
-        $data = User::role('Operator')->with('ref_guru.ref_ptk')->get();
+        $data = User::role('Operator')->with('ref_guru.ref_ptk')->get();        
 
         $referensi = [
             'ref_gender' => RefGender::all(),

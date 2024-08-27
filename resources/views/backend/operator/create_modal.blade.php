@@ -15,6 +15,7 @@
                         <div class="form-group col-sm-12 col-md-12"><label class="col-form-label">Nama Guru</label>
 
                             <div><select class="form-control" name="user_id">
+                                    <option value="">-- Pilih Guru--</option>
                                     @foreach ($data_guru as $item)
                                         <option value="{{ $item->id }}">
                                             {{ $item->ref_guru->gelar_depan }}
