@@ -55,6 +55,10 @@
                             <li class=""><a
                                     href="{{ route('teacher.index') }}">{{ __('menu_wording.menu_teacher') }}</a></li>
                         @endcan
+                        @can('Operator')
+                            <li class=""><a
+                                    href="{{ route('operator.index') }}">{{ __('menu_wording.menu_operator') }}</a></li>
+                        @endcan
                     </ul>
                 </li>
             @endcan
