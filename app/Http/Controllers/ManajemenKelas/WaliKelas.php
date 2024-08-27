@@ -14,8 +14,9 @@ class WaliKelas extends Controller
     public function index()
     {
         $kelas = RefKelas::with('guru')->get();
-
+        $data_guru = RefGuru::all();
         return view('manajemenkelas.index', ['kelas' => $kelas]);
+        
     }
 
     /**
