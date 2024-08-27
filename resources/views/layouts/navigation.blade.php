@@ -64,6 +64,18 @@
             @endcan
             <!-- END USERS  -->
 
+            @can('Manajemen Kelas')
+                <li>
+                    <a href="#">
+                        <svg class="icon">
+                            <use xlink:href="{{ asset('svg/nav/nav-sprite.svg#ic_management_class') }}"></use>
+                        </svg>
+                        <span class="nav-label">Manajemen Kelas</span><span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse"></ul>
+                </li>
+            @endcan
+
             <!--START REPORT -->
             @can('report.index')
                 <li>
