@@ -10,7 +10,6 @@ class OperatorController extends Controller
 {
     public function index()
     {
-        $data = User::role('Operator')->with('ref_guru')->get();
         $userIds = User::role('Guru')->pluck('id');
         $data_guru = User::role('Guru')
             ->whereDoesntHave('roles', function ($query) {
@@ -18,6 +17,8 @@ class OperatorController extends Controller
             })
             ->with('ref_guru')
             ->get();
+
+        $data = User::role('Operator')->with('ref_gutu.ref_ptk')->get();
 
         $referensi = [
             'ref_gender' => RefGender::all(),

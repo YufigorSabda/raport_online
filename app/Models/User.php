@@ -48,6 +48,6 @@ class User extends Authenticatable
 
     public function ref_guru()
     {
-        return $this->hasOne(RefGuru);
+        return $this->hasOne(RefGuru::class);
     }
 }
