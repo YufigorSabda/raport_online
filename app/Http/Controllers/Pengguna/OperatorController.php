@@ -21,7 +21,7 @@ class OperatorController extends Controller
             ->get();
 
         $data = User::role('Operator')->with('ref_guru.ref_ptk')->get();
-
+        return $data;
         $referensi = [
             'ref_gender' => RefGender::all(),
             'ref_ptk'   => RefPtk::all()
