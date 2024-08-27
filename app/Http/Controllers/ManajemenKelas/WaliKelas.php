@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\ManajemenKelas;
 
 use App\Http\Controllers\Controller;
+use App\Models\RefKelas; // Pastikan model RefKelas sudah diimpor
 use Illuminate\Http\Request;
 
 class WaliKelas extends Controller
@@ -12,7 +13,9 @@ class WaliKelas extends Controller
      */
     public function index()
     {
-        //
+        $kelas = RefKelas::with('guru')->get();
+
+        return view('manajemenkelas.index', ['kelas' => $kelas]);
     }
 
     /**

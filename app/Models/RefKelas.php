@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class RefKelas extends Model
 {
     use HasFactory;
+
     protected $table = 'ref_kelas';
 
-    
     protected $fillable = [
         'nama_kelas',
         'id_tingkat',
@@ -18,6 +18,9 @@ class RefKelas extends Model
         'id_tahun_ajaran',
     ];
 
-
-    protected $primaryKey = 'id';
+    // Relasi ke tabel ref_guru
+    public function guru()
+    {
+        return $this->belongsTo(RefGuru::class, 'id_guru');
+    }
 }
