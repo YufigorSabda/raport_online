@@ -36,28 +36,36 @@ class OperatorController extends Controller
         try {
             if ($user->hasRole('Guru')) {
                 $user->assignRole('Operator');
-                flash()->success('Berhasil menambahkan data');
+
+                $request->session()->flash('message', 'Berhasil menyimpan data');
+                $request->session()->flash('alert-type', 'success');
             } else {
-                flash()->error('User tidak memiliki role guru');
+                $request->session()->flash('message', 'User bukan role guru');
+                $request->session()->flash('alert-type', 'error');
             }
         } catch (\Exception $e) {
-            flash()->error('Terjadi kesalahan. ' . $e->getMessage());
+            $request->session()->flash('message', "Terjadi kesalahan. $e");
+            $request->session()->flash('alert-type', 'error');
         }
         return back();
     }
 
-    public function destroy($id)
+    public function destroy($id, Request $request)
     {
         $user = User::findOrFail($id);
         try {
             if ($user->hasRole('Operator')) {
                 $user->removeRole('Operator');
-                flash()->success('Role Operator berhasil dihapus');
+
+                $request->session()->flash('message', 'Berhasil menghapus data');
+                $request->session()->flash('alert-type', 'success');
             } else {
-                flash()->error('Role Operator tidak ditemukan untuk pengguna ini');
+                $request->session()->flash('message', 'User tidak memiliki role operator');
+                $request->session()->flash('alert-type', 'error');
             }
         } catch (\Exception $e) {
-            flash()->error('Terjadi kesalahan. ' . $e->getMessage());
+            $request->session()->flash('message', "Terjadi kesalahan. $e");
+            $request->session()->flash('alert-type', 'error');
         }
         return back();
     }
