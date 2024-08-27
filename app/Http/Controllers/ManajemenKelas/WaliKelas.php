@@ -54,9 +54,21 @@ class WaliKelas extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
-    {
-        //
-    }
+{
+
+    $request->validate([
+        'id_guru' => 'required|exists:ref_guru,id',
+    ]);
+
+    
+    $kelas = RefKelas::findOrFail($id);
+
+    $kelas->id_guru = $request->id_guru;
+    $kelas->save();
+    
+    return redirect()->route('walikelas.index')->with('sukses', 'Wali kelas berhasil diupdate.');
+}
+
 
     /**
      * Remove the specified resource from storage.
