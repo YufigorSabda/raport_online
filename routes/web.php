@@ -4,6 +4,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DataSekolah\KepalaSekolahController;
 use App\Http\Controllers\DataSekolah\SekolahController;
+use App\Http\Controllers\ManajemenKelas\AbsensiController;
+use App\Http\Controllers\ManajemenKelas\CatatanController;
+use App\Http\Controllers\ManajemenKelas\PesertaDidikController;
+use App\Http\Controllers\ManajemenKelas\WaliKelasController;
 use App\Http\Controllers\Pengguna\GuruController;
 use App\Http\Controllers\Pengguna\OperatorController;
 use App\Http\Controllers\Pengguna\SiswaController;
@@ -36,13 +40,13 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('operator', OperatorController::class)->only(['index', 'store', 'destroy']);
 
-    Route::resource('walikelas', WaliKelas::class)->only(['index']);
+    Route::resource('walikelas', WaliKelasController::class)->only(['index']);
 
-    Route::resource('pesertadidik', PesertaDidik::class)->only(['index']);
+    Route::resource('pesertadidik', PesertaDidikController::class)->only(['index']);
 
-    Route::resource('absensi', Absensi::class)->only(['index']);
+    Route::resource('absensi', AbsensiController::class)->only(['index']);
 
-    Route::resource('catatan', Catatan::class)->only(['index']);
+    Route::resource('catatan', CatatanController::class)->only(['index']);
 
     Route::controller(ProfileController::class)->group(function () {
         Route::get('/profile', 'index')->name('profile.index');
