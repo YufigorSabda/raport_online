@@ -42,7 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('walikelas', WaliKelasController::class)->only(['index', 'update', 'edit']);
 
-    Route::resource('pesertadidik', PesertaDidikController::class)->only(['index']);
+    Route::resource('pesertadidik', PesertaDidikController::class);
 
     Route::resource('absensi', AbsensiController::class)->only(['index']);
 
