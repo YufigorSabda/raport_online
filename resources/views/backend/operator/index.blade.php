@@ -50,7 +50,7 @@
                                             <td>{{ $value->email }}</td>
                                             <td>{{ $value->ref_guru->nik }}</td>
                                             <td>{{ $value->ref_guru->gelar_depan }}</td>
-                                            <td>{{ $value->user->name }}</td>
+                                            <td>{{ $value->name }}</td>
                                             <td>{{ $value->ref_guru->gelar_belakang }}</td>
                                             <td>{{ $value->ref_guru->ref_ptk->nama_ptk }}</td>
                                             <td class="d-flex justify-content-center" style="gap: 5px">

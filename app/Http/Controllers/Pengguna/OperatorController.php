@@ -7,6 +7,7 @@ use App\Models\RefGender;
 use App\Models\RefPtk;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OperatorController extends Controller
 {
@@ -21,7 +22,6 @@ class OperatorController extends Controller
             ->get();
 
         $data = User::role('Operator')->with('ref_guru.ref_ptk')->get();
-        return $data;
         $referensi = [
             'ref_gender' => RefGender::all(),
             'ref_ptk'   => RefPtk::all()
