@@ -5,19 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class RefTingkat extends Model
+class RefTahunAjaran extends Model
 {
     use HasFactory;
-    protected $table = 'ref_tingkat';
+
+    protected $table = 'ref_tahun_ajaran';
     protected $fillable = [
-        'nama_tingkat',
+        'nama_tahun_ajaran',
     ];
     public $timestamps = false;
-
-    public function ref_siswa()
-    {
-        return $this->hasOne(RefSiswa::class);
-    }
 
     public function ref_kelas()
     {

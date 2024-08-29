@@ -27,4 +27,9 @@ class RefGuru extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function ref_kelas()
+    {
+        return $this->hasMany(RefKelas::class, 'id_tahun_ajaran');
+    }
 }
