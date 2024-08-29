@@ -40,7 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('operator', OperatorController::class)->only(['index', 'store', 'destroy']);
 
-    Route::resource('walikelas', WaliKelasController::class)->only(['index', 'update']);
+    Route::resource('walikelas', WaliKelasController::class)->only(['index', 'update', 'edit']);
 
     Route::resource('pesertadidik', PesertaDidikController::class)->only(['index']);
 

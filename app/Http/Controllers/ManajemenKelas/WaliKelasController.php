@@ -15,8 +15,18 @@ class WaliKelasController extends Controller
             'ref_tingkat',
             'ref_tahun_ajaran'
         ])->get();
-            //return $data;
+        //return $data;
         return view('backend.wali_kelas.index', compact('data'));
+    }
+
+    public function edit($id)
+    {
+        $data = RefKelas::with([
+            'ref_guru.user',
+            'ref_tingkat',
+            'ref_tahun_ajaran'
+        ])->findOrFail($id);
+        return response()->json($data);
     }
 
     public function update(Request $request, $id)
