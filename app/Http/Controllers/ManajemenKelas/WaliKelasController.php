@@ -16,6 +16,6 @@ class WaliKelasController extends Controller
             'ref_tahun_ajaran'
         ])->get();
 
-        return view('backend.wali_kelas', compact('data'));
+        return view('backend.wali_kelas.index', compact('data'));
     }
 }
