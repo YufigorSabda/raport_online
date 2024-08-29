@@ -36,6 +36,14 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('operator', OperatorController::class)->only(['index', 'store', 'destroy']);
 
+    Route::resource('walikelas', WaliKelas::class)->only(['index']);
+
+    Route::resource('pesertadidik', PesertaDidik::class)->only(['index']);
+
+    Route::resource('absensi', Absensi::class)->only(['index']);
+
+    Route::resource('catatan', Catatan::class)->only(['index']);
+
     Route::controller(ProfileController::class)->group(function () {
         Route::get('/profile', 'index')->name('profile.index');
         Route::post('/profile/save', 'save')->name('profile.save');

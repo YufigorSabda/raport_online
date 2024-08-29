@@ -54,10 +54,9 @@
                                             <td>{{ $value->ref_guru->gelar_belakang }}</td>
                                             <td>{{ $value->ref_guru->ref_ptk->nama_ptk }}</td>
                                             <td class="d-flex justify-content-center" style="gap: 5px">
-                                                <button class="btn btn-warning"
-                                                    onclick="resetPassword({{ $value->user->id }})" data-toggle="modal"
-                                                    data-target="#resetpwModal"><i class="fas fa-minus-square-o"
-                                                        aria-hidden="true"></i></button>
+                                                <button onclick="removeUser({{ $value->id }})" class="btn btn-danger"
+                                                    onclick="" data-toggle="modal" data-target="#removeModal"><i
+                                                        class="fas fa-minus-circle"></i></button>
 
                                             </td>
                                         </tr>
@@ -75,6 +74,7 @@
     @include('backend.operator.create_modal')
 
     {{-- Modal Reset --}}
+    @include('backend.operator.remove_modal')
 
 @endsection
 @push('scripts')

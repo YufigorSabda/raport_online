@@ -64,6 +64,35 @@
             @endcan
             <!-- END USERS  -->
 
+            @can('Manajemen Kelas')
+                <li>
+                    <a href="#">
+                        <svg class="icon">
+                            <use xlink:href="{{ asset('svg/nav/nav-sprite.svg#ic_management_class') }}"></use>
+                        </svg>
+                        <span class="nav-label">Manajemen Kelas</span><span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav nav-second-level collapse">
+                        @can('Peserta Didik')
+                            <li class=""><a
+                                    href="{{ route('pesertadidik.index') }}">{{ __('menu_wording.menu_pesdik') }}</a></li>
+                        @endcan
+                        @can('Wali Kelas')
+                            <li class=""><a
+                                    href="{{ route('walikelas.index') }}">{{ __('menu_wording.menu_walikelas') }}</a></li>
+                        @endcan
+                        @can('Absensi')
+                            <li class=""><a
+                                    href="{{ route('absensi.index') }}">{{ __('menu_wording.menu_absensi') }}</a></li>
+                        @endcan
+                        @can('Catatan')
+                            <li class=""><a
+                                    href="{{ route('catatan.index') }}">{{ __('menu_wording.menu_catatan') }}</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcan
+
             <!--START REPORT -->
             @can('report.index')
                 <li>

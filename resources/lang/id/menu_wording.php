@@ -34,6 +34,14 @@
         'operator.edit_title'       => 'Edit Operator',
         'operator.view_title'       => 'Detail Operator',
 
+        'menu_pesdik'               => 'Peserta Didik',
+
+        'menu_walikelas'            => 'Wali Kelas',
+
+        'menu_absensi'              => 'Absensi',
+
+        'menu_catatan'              => 'Catatan',
+
         'menu_report' => [
             'menu'                  => 'Laporan',
             'staff'                 => 'Laporan Pegawai',
